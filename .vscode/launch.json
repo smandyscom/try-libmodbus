@@ -1,10 +1,19 @@
 {
     "version": "0.2.0",
     "configurations": [
+        { 
+            "name": "(lldb) Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceRoot}/main",
+            "processId": "${command:pickProcess}",
+            "MIMode": "lldb"
+        },
         {
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
+            "preLaunchTask": "makeFile",
             "program": "${workspaceRoot}/main",
             "args": [],
             "stopAtEntry": false,
